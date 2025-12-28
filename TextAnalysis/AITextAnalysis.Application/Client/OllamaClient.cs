@@ -14,7 +14,7 @@ public class OllamaClient : ITextAnalysisAiClient
         _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
     }
 
-    public async Task<string> AskAsync(string text, CancellationToken cancellationToken = default)
+    public async Task<string> AskAsync(string text, CancellationToken cancellationToken)
     {
         ValidateInput(text);
 
@@ -33,7 +33,7 @@ public class OllamaClient : ITextAnalysisAiClient
 
         var result = await response.Content.ReadFromJsonAsync<OllamaResponse>(cancellationToken: cancellationToken);
 
-        if (string.IsNullOrWhiteSpace(result.Response))
+        if (string.IsNullOrWhiteSpace(result?.Response))
             throw new InvalidOperationException("AI returned an empty summary.");
 
         return result.Response;

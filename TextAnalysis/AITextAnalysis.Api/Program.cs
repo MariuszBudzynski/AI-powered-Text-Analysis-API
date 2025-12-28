@@ -5,7 +5,7 @@ using AITextAnalysis.Application.Interfaces;
 var builder = WebApplication.CreateBuilder(args);
 
 // Configuration
-var ollamaBaseUrl = builder.Configuration["Ollama:BaseUrl"];
+var ollamaBaseUrl = builder.Configuration["Ollama:BaseUrl"] ?? String.Empty;
 
 // Services
 builder.Services.AddEndpointsApiExplorer();
