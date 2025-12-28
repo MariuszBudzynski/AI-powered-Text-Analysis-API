@@ -8,7 +8,7 @@ The API currently supports AI question answering, and the architecture allows ea
 
 ## Project Goals
 - Integrate local AI models with .NET  
-- Avoid paid APIs — 100% free and offline  
+- Avoid paid APIs — 100% free
 - Provide clean, extensible architecture  
 - Serve as a professional portfolio project  
 - Demonstrate production-ready API patterns  
@@ -88,4 +88,5 @@ This project demonstrates:
 - Awareness of cost, privacy, and deployment constraints  
 - Real-world API design  
 - A strong portfolio example for backend + AI skills  
+
 
