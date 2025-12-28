@@ -34,7 +34,7 @@ public class OllamaClient : ITextAnalysisAiClient
         var result = await response.Content.ReadFromJsonAsync<OllamaResponse>(cancellationToken: cancellationToken);
 
         if (string.IsNullOrWhiteSpace(result?.Response))
-            throw new InvalidOperationException("AI returned an empty summary.");
+            throw new InvalidOperationException("AI returned an empty text.");
 
         return result.Response;
     }
@@ -42,7 +42,7 @@ public class OllamaClient : ITextAnalysisAiClient
     private static void ValidateInput(string text)
     {
         if (string.IsNullOrWhiteSpace(text))
-            throw new ArgumentException("Text to summarize cannot be empty.", nameof(text));
+            throw new ArgumentException("Text cannot be empty.", nameof(text));
     }
 
     private static string Truncate(string text, int maxLength)
