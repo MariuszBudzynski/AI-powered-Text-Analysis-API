@@ -16,7 +16,7 @@ The API currently supports AI question answering, and the architecture allows ea
 ## Current AI Capability
 Ask Questions (Q&A)
 
-Send any question or prompt, and the local LLM returns a helpful answer.
+Send any question and the local LLM returns a helpful answer.
 
 Use cases:
 - Explain concepts  
@@ -88,5 +88,6 @@ This project demonstrates:
 - Awareness of cost, privacy, and deployment constraints  
 - Real-world API design  
 - A strong portfolio example for backend + AI skills  
+
 
 
