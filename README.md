@@ -1,188 +1,90 @@
-# AI-powered Text Analysis API
 
-## 📌 Overview
+# AI-powered Text Assistant API
 
-AI-powered Text Analysis API is a **backend-only .NET project** that exposes a RESTful API for analyzing text using a **local Large Language Model (LLM)**. The application demonstrates how AI can be integrated into a modern .NET backend **without any paid cloud services or frontend UI**.
+## Overview
+AI-powered Text Assistant API is a backend-only .NET 8 project that exposes a REST API for interacting with a local Large Language Model (LLM). The application integrates with Ollama, enabling fully offline AI capabilities without any paid cloud services.
 
-The project uses a locally running open‑source model (via **Ollama**) and focuses on clean architecture, extensibility, and production‑ready API design.
+The API currently supports AI question answering, and the architecture allows easy expansion into summarization, sentiment analysis, translation, and more.
 
----
+## Project Goals
+- Integrate local AI models with .NET  
+- Avoid paid APIs — 100% free and offline  
+- Provide clean, extensible architecture  
+- Serve as a professional portfolio project  
+- Demonstrate production-ready API patterns  
 
-## 🎯 Goals of the Project
+## Current AI Capability
+Ask Questions (Q&A)
 
-* Demonstrate **AI integration in a .NET backend**
-* Avoid paid APIs (100% free & offline capable)
-* Focus on **architecture, clean code, and real-world use cases**
-* Provide a solid **portfolio project** suitable for GitHub and CV
+Send any question or prompt, and the local LLM returns a helpful answer.
 
----
+Use cases:
+- Explain concepts  
+- Answer general knowledge questions  
+- Provide definitions  
+- Assist with problem-solving  
 
-## 🧠 AI Capabilities
+## Architecture
+/src  
+ ├── Api → Minimal API endpoints  
+ ├── Application → DTOs, interfaces, business logic  
+ ├── UnitTests → Tests  
 
-The API supports multiple AI-powered text analysis operations:
+Key principles:
+- Separation of concerns  
+- AI logic hidden behind interfaces  
+- Replaceable AI provider  
+- Testable application core  
+- Minimal API for simplicity and performance  
 
-* **Text Summarization** – generate concise summaries
-* **Sentiment Analysis** – detect emotional tone (positive / neutral / negative)
-* **Keyword Extraction** – identify key concepts
-* **Text Classification** – assign text to predefined categories
-* **Language Detection** *(optional extension)*
+## Technology Stack
+- .NET 8  
+- ASP.NET Core Minimal API  
+- Ollama (local LLM runtime)  
+- HttpClient  
+- Swagger / OpenAPI  
+- Dependency Injection  
+- JSON REST API
+- XUnit  
 
-Each feature is exposed as a separate REST endpoint.
+## AI Model
+- Default model: llama3 (or any other installed in Ollama)  
+- Runs locally  
+- No API keys required  
+- Fully offline after initial model download  
 
----
+## Example Endpoint
+POST /api/text/ask
 
-## 🏗 Architecture
-
-The project follows **Clean Architecture** principles:
-
-```
-/src
- ├── Api            → Controllers / Minimal API endpoints
- ├── Application    → Use cases, DTOs, interfaces
- ├── Domain         → Core business models
- ├── Infrastructure → AI client (Ollama), HTTP, configuration
-```
-
-### Key Architectural Concepts
-
-* Clear separation of concerns
-* AI logic isolated behind interfaces
-* Easily replaceable AI provider (OpenAI, Azure OpenAI, etc.)
-* Testable application core
-
----
-
-## ⚙️ Technology Stack
-
-* **.NET 8 / ASP.NET Core Web API**
-* **Minimal APIs**
-* **Ollama** (local LLM runtime)
-* **HttpClient** for AI communication
-* **Swagger / OpenAPI**
-* **Dependency Injection**
-* **JSON-based REST API**
-
----
-
-## 🤖 AI Model
-
-* Default model: `llama3` or `mistral`
-* Runs **locally** via Ollama
-* No API keys required
-* Fully offline after model download
-
-AI is accessed via Ollama’s HTTP API.
-
----
-
-## 🔌 Example Endpoints
-
-### Summarize Text
-
-```
-POST /api/text/summarize
-```
-
-**Request:**
-
-```json
+Request:
 {
-  "text": "Long input text..."
+  "text": "What is dependency injection in .NET?"
 }
-```
 
-**Response:**
-
-```json
+Response:
 {
-  "summary": "Short summary of the text"
+  "answer": "Dependency injection is a design pattern..."
 }
-```
 
----
+## Getting Started
+Prerequisites:
+- .NET 8 SDK  
+- Ollama installed  
 
-### Sentiment Analysis
+Setup:
+1. Download a model:
+   ollama pull llama3
 
-```
-POST /api/text/sentiment
-```
+2. Run the API:
+   dotnet run
 
----
-
-### Keyword Extraction
-
-```
-POST /api/text/keywords
-```
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-* .NET 8 SDK
-* Ollama installed
-
-### Setup
-
-```bash
-ollama pull llama3
-```
-
-```bash
-dotnet run
-```
-
-Swagger UI will be available at:
-
-```
+Swagger UI:
 https://localhost:{port}/swagger
-```
 
----
-
-## 🧪 Testing
-
-* Application logic designed for unit testing
-* AI communication isolated behind interfaces
-* Easy to mock AI responses
-
----
-
-## 🔮 Possible Extensions
-
-* Authentication (API Key / JWT)
-* Request logging & telemetry
-* Rate limiting
-* Prompt templates
-* Streaming responses
-* Docker support
-* Switchable AI providers
-
----
-
-## 📄 Why This Project?
-
+## Why This Project?
 This project demonstrates:
-
-* Practical AI usage in backend systems
-* Clean, maintainable .NET architecture
-* Awareness of cost, privacy, and deployment concerns
-* Real-world API design skills
-
-It is intended as a **professional portfolio project**, not a tutorial or toy example.
-
----
-
-## 📜 License
-
-MIT License
-
----
-
-## 👤 Author
-
-**Mariusz Budzyński**
-
-.NET Developer
+- Practical AI integration in backend systems  
+- Clean, maintainable .NET architecture  
+- Awareness of cost, privacy, and deployment constraints  
+- Real-world API design  
+- A strong portfolio example for backend + AI skills  
