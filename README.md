@@ -2,7 +2,7 @@
 # AI-powered Text Assistant API
 
 ## Overview
-AI-powered Text Assistant API is a backend-only .NET 8 project that exposes a REST API for interacting with a local Large Language Model (LLM). The application integrates with Ollama, enabling fully offline AI capabilities without any paid cloud services.
+AI-powered Text Assistant API is a backend-only .NET 8 project that exposes a REST API for interacting with a local Large Language Model (LLM). The application integrates with Ollama, enabling AI capabilities without any paid cloud services.
 
 The API currently supports AI question answering, and the architecture allows easy expansion into summarization, sentiment analysis, translation, and more.
 
@@ -88,3 +88,4 @@ This project demonstrates:
 - Awareness of cost, privacy, and deployment constraints  
 - Real-world API design  
 - A strong portfolio example for backend + AI skills  
+
