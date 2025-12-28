@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/TextAnalysis/.vs/AITextAnalysis
+/TextAnalysis/AITextAnalysis.Api/bin/Debug/net8.0
+/TextAnalysis/AITextAnalysis.Api/obj
+/TextAnalysis/AITextAnalysis.Application/bin/Debug/net8.0
+/TextAnalysis/AITextAnalysis.Application/obj
