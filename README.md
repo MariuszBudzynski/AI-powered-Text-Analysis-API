@@ -40,11 +40,6 @@ Request:
   "text": "What is dependency injection in .NET?"
 }
 
-Response:
-{
-  "answer": "Dependency injection is a design pattern..."
-}
-
 ## Getting Started
 Prerequisites:
 - .NET 8 SDK  
@@ -66,4 +61,5 @@ This project demonstrates:
 - Clean, maintainable .NET architecture  
 - Real-world API design  
 - A strong portfolio example for backend + AI skills  
+
 
