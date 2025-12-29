@@ -9,3 +9,5 @@
 /TextAnalysis/AITextAnalysis.Application/bin/Debug/net8.0
 /TextAnalysis/AITextAnalysis.Application/obj
 /TextAnalysis/AITextAnalysis.UnitTests/obj
+/TextAnalysis/.vs/ProjectEvaluation
+/TextAnalysis/AITextAnalysis.UnitTests/bin/Debug/net8.0
