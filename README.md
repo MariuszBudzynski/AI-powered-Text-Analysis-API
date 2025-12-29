@@ -6,13 +6,6 @@ AI-powered Text Assistant API is a backend-only .NET 8 project that exposes a RE
 
 The API currently supports AI question answering, and the architecture allows easy expansion into summarization, sentiment analysis, translation, and more.
 
-## Project Goals
-- Integrate local AI models with .NET  
-- Avoid paid APIs — 100% free
-- Provide clean, extensible architecture  
-- Serve as a professional portfolio project  
-- Demonstrate production-ready API patterns  
-
 ## Current AI Capability
 Ask Questions (Q&A)
 
@@ -73,3 +66,4 @@ This project demonstrates:
 - Clean, maintainable .NET architecture  
 - Real-world API design  
 - A strong portfolio example for backend + AI skills  
+
